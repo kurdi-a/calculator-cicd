@@ -12,14 +12,14 @@ pipeline {
         stage('Setup Python') {
             steps {
                 echo 'Setting up Python environment...'
-                sh 'python3 --version'
+                bat 'python3 --version'
             }
         }
 
         stage('Run Unit Tests') {
             steps {
                 echo 'Running unit tests...'
-                sh 'python3 -m pytest test_calculator.py -v'
+                bat 'python3 -m pytest test_calculator.py -v'
             }
         }
     }
